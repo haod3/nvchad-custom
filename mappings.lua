@@ -22,6 +22,7 @@ M.telescope = {
   n = {
 	["<C-p>"] = { "<cmd> Telescope find_files <CR>", "find files" },
 	["<C-f>"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
+	["<C-S-p>"] = { "<cmd> Telescope project <CR>", "find projects" },
   }
 }
 

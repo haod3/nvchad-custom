@@ -3,7 +3,8 @@ return {
 	override_options = {
 	  defaults = {
 		prompt_prefix = "  "
-	  }
+	  },
+	  extensions_list = { "project" }
 	}
   },
   ["neovim/nvim-lspconfig"] = {
@@ -57,4 +58,5 @@ return {
 	end,
   },
   ["ray-x/guihua.lua"] = { opt = true },
+  ["nvim-telescope/telescope-project.nvim"] = {},
 }
