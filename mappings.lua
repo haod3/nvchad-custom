@@ -3,7 +3,7 @@ local M = {}
 M.general = {
   n = {
 	["<F2>"] = { "<cmd> SymbolsOutline <CR>", "show outline" },
-	["<leader><C-`>"] = { "<cmd> windo lcl|ccl <CR>", "close location/quickfix"},
+	["<C-S-u>"] = { "<cmd> windo lcl|ccl <CR>", "close location/quickfix"},
   },
   v = {
 	["<C-c>"] = { '"+y', "copy v line" },
