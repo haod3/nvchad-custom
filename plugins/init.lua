@@ -14,7 +14,11 @@ return {
     end,
   },
   ["phaazon/hop.nvim"] = {
+	opt = true,
 	branch = 'v2', -- optional but strongly recommended
+	setup = function()
+	  require("core.lazy_load").on_file_open "hop.nvim"
+	end,
     config = function()
       -- you can configure Hop the way you like here; see :h hop-config
       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
