@@ -4,6 +4,18 @@ M.general = {
   n = {
 	["<F2>"] = { "<cmd> SymbolsOutline <CR>", "show outline" },
 	["<C-S-u>"] = { "<cmd> windo lcl|ccl <CR>", "close location/quickfix"},
+	["[t"] = {
+	  function()
+		require("todo-comments").jump_prev()
+	  end,
+	  "previous todo comment"
+	},
+	["t]"] = {
+	  function()
+		require("todo-comments").jump_next()
+	  end,
+	  "next todo comment"
+	}
   },
   v = {
 	["<C-c>"] = { '"+y', "copy v line" },
