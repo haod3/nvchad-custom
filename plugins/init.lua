@@ -59,4 +59,10 @@ return {
   },
   ["ray-x/guihua.lua"] = { opt = true },
   ["nvim-telescope/telescope-project.nvim"] = {},
+  ["folke/todo-comments.nvim"] = {
+	branch = 'neovim-pre-0.8.0',
+	config = function()
+	  require("todo-comments").setup{}
+	end
+  },
 }
