@@ -4,7 +4,7 @@ return {
 	  defaults = {
 		prompt_prefix = "  "
 	  },
-	  extensions_list = { "project" }
+	  extensions_list = { "themes", "terms", "project" }
 	}
   },
   ["neovim/nvim-lspconfig"] = {
