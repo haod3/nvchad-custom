@@ -7,12 +7,7 @@ local servers = { "gopls", "pyright", "clangd" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
-    on_attach = function(client, bufnr)
-	  -- disable lsp formatting, use null-ls
-	  client.resolved_capabilities.document_formatting = false
-      client.resolved_capabilities.document_range_formatting = false
-	  return on_attach(client, bufnr)
-	end,
+	on_attach = on_attach,
     capabilities = capabilities,
   }
 end
