@@ -15,7 +15,8 @@ M.general = {
 		require("todo-comments").jump_next()
 	  end,
 	  "next todo comment"
-	}
+	},
+	["<leader>cg"] = { "<cmd> GtagsCursor <CR>", "gtags current token" }
   },
   v = {
 	["<C-c>"] = { '"+y', "copy v line" },
