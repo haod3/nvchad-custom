@@ -69,4 +69,11 @@ return {
 	  require("todo-comments").setup{}
 	end
   },
+  ["nvim-tree/nvim-tree.lua"] = {
+	override_options = {
+      view = {
+        adaptive_size = false
+      }
+	}
+  }
 }
