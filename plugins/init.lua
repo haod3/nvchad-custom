@@ -3,7 +3,8 @@ return {
 	override_options = {
 	  defaults = {
 		prompt_prefix = "  "
-	  }
+	  },
+	  extensions_list = { "themes", "terms", "project" }
 	}
   },
   ["neovim/nvim-lspconfig"] = {
@@ -13,7 +14,11 @@ return {
     end,
   },
   ["phaazon/hop.nvim"] = {
+	opt = true,
 	branch = 'v2', -- optional but strongly recommended
+	setup = function()
+	  require("core.lazy_load").on_file_open "hop.nvim"
+	end,
     config = function()
       -- you can configure Hop the way you like here; see :h hop-config
       require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
@@ -57,4 +62,18 @@ return {
 	end,
   },
   ["ray-x/guihua.lua"] = { opt = true },
+  ["nvim-telescope/telescope-project.nvim"] = {},
+  ["folke/todo-comments.nvim"] = {
+	branch = 'neovim-pre-0.8.0',
+	config = function()
+	  require("todo-comments").setup{}
+	end
+  },
+  ["nvim-tree/nvim-tree.lua"] = {
+	override_options = {
+      view = {
+        adaptive_size = false
+      }
+	}
+  }
 }

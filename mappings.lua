@@ -3,7 +3,20 @@ local M = {}
 M.general = {
   n = {
 	["<F2>"] = { "<cmd> SymbolsOutline <CR>", "show outline" },
-	["<leader><C-`>"] = { "<cmd> windo lcl|ccl <CR>", "close location/quickfix"},
+	["<C-S-u>"] = { "<cmd> windo lcl|ccl <CR>", "close location/quickfix"},
+	["[t"] = {
+	  function()
+		require("todo-comments").jump_prev()
+	  end,
+	  "previous todo comment"
+	},
+	["t]"] = {
+	  function()
+		require("todo-comments").jump_next()
+	  end,
+	  "next todo comment"
+	},
+	["<leader>cg"] = { "<cmd> GtagsCursor <CR>", "gtags current token" }
   },
   v = {
 	["<C-c>"] = { '"+y', "copy v line" },
@@ -22,6 +35,7 @@ M.telescope = {
   n = {
 	["<C-p>"] = { "<cmd> Telescope find_files <CR>", "find files" },
 	["<C-f>"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
+	["<C-S-p>"] = { "<cmd> Telescope project <CR>", "find projects" },
   }
 }
 
