@@ -13,6 +13,13 @@ autocmd("FileType", {
   end,
 })
 
+autocmd("TermOpen", {
+  pattern = "*",
+  callback = function()
+    vim.wo.colorcolumn = "0"
+  end,
+})
+
 autocmd("FileType", {
   pattern = "lua",
   callback = function()
