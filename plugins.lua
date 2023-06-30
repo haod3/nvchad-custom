@@ -52,6 +52,17 @@ local plugins = {
     event = { "CmdlineEnter" },
     ft = { "go", "gomod" },
   },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp-signature-help",
+    },
+    opts = {
+      sources = {
+        { name = "nvim_lsp_signature_help" },
+      },
+    },
+  },
 }
 
 return plugins

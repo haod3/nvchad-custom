@@ -3,4 +3,12 @@ local M = {}
 M.plugins = "custom.plugins"
 M.mappings = require "custom.mappings"
 
+M.ui = {
+  lsp = {
+    signature = {
+      disabled = true,
+    },
+  },
+}
+
 return M
