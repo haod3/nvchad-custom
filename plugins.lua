@@ -29,13 +29,6 @@ local plugins = {
     end,
   },
   {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
-    config = function()
-      require("symbols-outline").setup()
-    end,
-  },
-  {
     "xiyaowong/virtcolumn.nvim",
     lazy = false,
   },
@@ -51,6 +44,39 @@ local plugins = {
     end,
     event = { "CmdlineEnter" },
     ft = { "go", "gomod" },
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp-signature-help",
+    },
+    opts = {
+      sources = {
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "buffer" },
+        { name = "nvim_lua" },
+        { name = "path" },
+        { name = "nvim_lsp_signature_help" },
+      },
+    },
+  },
+  {
+    "stevearc/aerial.nvim",
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("aerial").setup {
+        backends = { "lsp", "treesitter", "markdown", "man" },
+        show_guides = true,
+        filter_kind = false,
+      }
+    end,
+    cmd = "AerialToggle",
   },
 }
 
