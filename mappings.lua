@@ -59,12 +59,6 @@ M.nvterm = {
   },
 }
 
-M.hop = {
-  n = {
-    ["ww"] = { "<cmd> HopWord <CR>", "motion" },
-  },
-}
-
 M.tabufline = {
   n = {
     ["<leader>X"] = {
